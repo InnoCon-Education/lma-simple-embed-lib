@@ -1,0 +1,84 @@
+/* CharacterLEDWizard Component Styles */
+
+/* Note: Common animations are in character-common.css */
+
+/* Animation 5: Beard rotation */
+@keyframes beard-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  66.6667% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+character-ledwizard #beard {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: beard-rotate 3000ms cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+/* Animation 6: Sparkle scale (3s duration) */
+@keyframes sparkle-scale-3s {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+character-ledwizard .sparkle-3000ms {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: sparkle-scale-3s 3000ms linear infinite;
+}
+
+/* Animation 7: Sparkle scale (1.2s duration) */
+@keyframes sparkle-scale-1200ms {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+character-ledwizard .sparkle-1200ms {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: sparkle-scale-1200ms 1200ms linear infinite;
+}
+
+/* Animation 8: Hat group scale */
+@keyframes hat-scale {
+  0% {
+    transform: scale(1, 1);
+  }
+  16.67% {
+    transform: scale(1.1, 0.9);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+character-ledwizard #hat-group {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: hat-scale 3000ms cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+

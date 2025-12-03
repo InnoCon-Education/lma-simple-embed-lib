@@ -1,0 +1,78 @@
+/* BackgroundStar Component Styles */
+
+background-star {
+  display: block;
+}
+
+background-star svg {
+  display: block;
+}
+
+/* Animation 1: Stars group 1 opacity animation */
+@keyframes stars-group-1-opacity {
+  0% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.75;
+  }
+}
+
+background-star #stars-group-1 {
+  animation: stars-group-1-opacity 4000.02ms linear infinite;
+}
+
+/* Animation 2: Gradient group 1 opacity animation */
+@keyframes gradient-group-1-opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+background-star #gradient-group-1 {
+  animation: gradient-group-1-opacity 1000.02ms linear infinite;
+}
+
+/* Animation 3: Gradient group 2 opacity animation */
+@keyframes gradient-group-2-opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+background-star #gradient-group-2 {
+  animation: gradient-group-2-opacity 2000.02ms linear infinite;
+}
+
+/* Animation 4: Stars group 2 opacity animation */
+@keyframes stars-group-2-opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+background-star #stars-group-2 {
+  animation: stars-group-2-opacity 4000.02ms linear infinite;
+}
+

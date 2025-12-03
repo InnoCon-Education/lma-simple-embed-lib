@@ -9,17 +9,25 @@ class CharacterLEDChan extends HTMLElement {
   }
 
   _importStyles() {
-    // Check if stylesheet is already loaded
-    const existingLink = document.querySelector('link[href*="character-ledchan.css"]');
-    if (existingLink) {
-      return; // Stylesheet already loaded
+    // Import common styles first
+    const commonLink = document.querySelector('link[href*="character-common.css"]');
+    if (!commonLink) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = './components/character-common.css';
+      document.head.appendChild(link);
     }
 
-    // Create and inject link tag
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = './components/character-ledchan.css';
-    document.head.appendChild(link);
+    // Check if component stylesheet is already loaded
+    const existingLink = document.querySelector('link[href*="character-ledchan.css"]');
+    if (!existingLink) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = './components/character-ledchan.css';
+      document.head.appendChild(link);
+    }
+
+    
   }
 
   connectedCallback() {
@@ -27,7 +35,7 @@ class CharacterLEDChan extends HTMLElement {
   }
   render() {
     return `
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="1500" viewBox="0 0 1280 1500" data-app="Xyris" class="you">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1280 1500" preserveAspectRatio="xMidYMid meet" data-app="Xyris" class="character">
         <defs>
         </defs>
         <g id="main-group" transform-origin="center" style="transform-box: fill-box;">

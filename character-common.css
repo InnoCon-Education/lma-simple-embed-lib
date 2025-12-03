@@ -1,0 +1,117 @@
+/* Common Character LED Animations */
+
+/* Base styles for all character components */
+.character, svg.character {
+  display: block;
+}
+
+/* Animation 1: First rect rotation */
+@keyframes rect1-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-22.5deg);
+  }
+  66.6667% {
+    transform: rotate(12.5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.character #rect1 {
+  transform-origin: top;
+  transform-box: fill-box;
+  animation: rect1-rotate 3000ms cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+/* Animation 2: Second rect rotation */
+@keyframes rect2-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  66.6667% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.character #rect2 {
+  transform-origin: top;
+  transform-box: fill-box;
+  animation: rect2-rotate 3000ms cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+/* Animation 3: Body group scale */
+@keyframes body-scale {
+  0% {
+    transform: scale(1, 1);
+  }
+  16.67% {
+    transform: scale(1.1, 0.9);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.character #body-group {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: body-scale 3000ms cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+/* Animation 4: Mask group translate (blinking eyes) */
+@keyframes mask-translate {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(0, 125px);
+  }
+  25% {
+    transform: translate(0, 0);
+  }
+  37.5% {
+    transform: translate(0, 125px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.character #mask-group {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: mask-translate 2000ms linear infinite;
+}
+
+/* Animation 5: Main group translate (jumping) */
+@keyframes main-translate {
+  0% {
+    transform: translate(0, -240px);
+  }
+  25% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -240px);
+  }
+}
+
+.character #main-group {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: main-translate 3000ms cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
