@@ -1,0 +1,69 @@
+/* CharacterLEDRedChan Component Styles */
+
+/* Note: Common animations (rect1, rect2, body, mask, main-group) are in character-common.css */
+
+character-ledredchan {
+  display: block;
+}
+
+character-ledredchan svg {
+  display: block;
+}
+
+/* Animation 1: Hat rotation (0;25;0 degrees) */
+@keyframes redchan-hat-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+character-ledredchan #hat-group {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: redchan-hat-rotate 3000.02ms cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+/* Animation 2: Arms scale (1,1; 1.1,0.9; 1,1) */
+@keyframes redchan-arms-scale {
+  0% {
+    transform: scale(1, 1);
+  }
+  16.6667% {
+    transform: scale(1.1, 0.9);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+character-ledredchan #arms-group {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: redchan-arms-scale 3000.02ms cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+/* Animation 3: Hat mask rotation (0;25;0 degrees) */
+@keyframes redchan-hat-mask-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+character-ledredchan #hat-mask-group {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: redchan-hat-mask-rotate 3000.02ms cubic-bezier(0, 0, 1, 1) infinite;
+}
+
