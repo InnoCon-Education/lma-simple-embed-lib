@@ -1,0 +1,23 @@
+@keyframes paper-span {
+  0% {
+    position: absolute;
+    top: 50%;
+    height: 0;
+    width: 100%;
+  }
+  100% {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+background-resultpaper svg {
+  position: absolute;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  animation: paper-span 500ms cubic-bezier(0.42, 0, 0.58, 1);
+}

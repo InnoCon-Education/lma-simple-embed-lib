@@ -1,0 +1,33 @@
+@keyframes roll {
+  0% {
+    top: 50%;
+    width: 100%;
+  }
+  100% {
+    top: 0;
+    width: 100%;
+  }
+}
+
+@keyframes roll-reverse {
+  0% {
+    bottom: 50%;
+    width: 100%;
+  }
+  100% {
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+background-resultpaperroll[upper] svg {
+  position: absolute;
+  top: 0;
+  animation: roll 500ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+background-resultpaperroll[lower] svg {
+  position: absolute;
+  bottom: 0;
+  animation: roll-reverse 500ms cubic-bezier(0.42, 0, 0.58, 1);
+}
